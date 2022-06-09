@@ -75,21 +75,21 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
-}
-
-
-function discount(type) {
-  if(type === 'teacher') {
-
-  } else if(type === 'student') {
-
-  } else if(type === 'public') {
-
-  } else {
-    return 'invalid';
+  discount: function (type) {
+    if(type === 'teacher') {
+      return burger.price * .75;
+    } else if(type === 'student') {
+      return burger.price * .75;
+    } else if(type === 'public') {
+      return burger.price * .90;
+    } else {
+      return 'invalid';
+    }
   }
 }
+
+
+
 
 
 
@@ -110,6 +110,13 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+for(let i = 0; i < reviews.length; i++) {
+  if(reviews[i].name === 'Julius') {
+    console.log(reviews[i].feedback);
+  } else {
+    console.log('Name not found.');
+  }
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -118,6 +125,13 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
+for(let i = 0; i < reviews.length; i++) {
+  if(reviews[i].name === 'Reyna') {
+    reviews[i].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+  }
+}
+
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
