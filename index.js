@@ -16,8 +16,12 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
+function createMenuItem(obj, num, time){
+  let newObj = {};
+  newObj.name = obj;
+  newObj.price = num;
+  newObj.category = time;
+  return newObj;
 }
 
 
@@ -31,6 +35,26 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+
+let obj1 = {
+  name: 'cheescake',
+  price: 3.50,
+  category: 'lunch'
+};
+let obj2 = {
+  name: 'churro',
+  price: 1.75,
+  category: 'lunch'
+};
+let obj3 = {
+  name: 'cheeken',
+  price: 6.99,
+  category: 'dinner'
+};
+
+console.log(createMenuItem(obj1));
+console.log(createMenuItem(obj2));
+console.log(createMenuItem(obj3));
 
 
 
@@ -52,6 +76,19 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   
+}
+
+
+function discount(type) {
+  if(type === 'teacher') {
+
+  } else if(type === 'student') {
+
+  } else if(type === 'public') {
+
+  } else {
+    return 'invalid';
+  }
 }
 
 
