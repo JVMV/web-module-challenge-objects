@@ -262,13 +262,13 @@ Use the carMaker function below to do the following:
 */
 
 //Not Tested
-function carMaker(obj, miles, dist) {
+function carMaker(obj, miles) {
     obj.odometer = miles;
     obj.drive = function (dist) {
       obj.odometer = miles + dist;
       return obj.odometer;
     };
-    return obj;
+    console.log(obj);
 }
 
 
