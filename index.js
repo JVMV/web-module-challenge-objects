@@ -261,10 +261,14 @@ Use the carMaker function below to do the following:
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
 
-
-function carMaker(/* code here */) {
-    /* code here */
-    
+//Not Tested
+function carMaker(obj, miles, dist) {
+    obj.odometer = miles;
+    obj.drive = function (dist) {
+      obj.odometer = miles + dist;
+      return obj.odometer;
+    };
+    return obj;
 }
 
 
