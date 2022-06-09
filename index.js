@@ -205,10 +205,16 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(arr, rating) {
+    let reviews = [];
+    for(let i = 0; i < arr.length; i++) {
+      if(arr[i].rating === rating) {
+        reviews.push(arr[i].feedback);
+      }
+    }
+    return reviews;
   }
-
+  console.log(getReviewByRating(reviews, 4));
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
@@ -223,9 +229,19 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(arr) {
+  let newArr = [];
+    let curString = '';
+    for(let i = 0; i < arr.length; i++) {
+      let curString = arr[i].feedback;
+      curString.split(' ');
+      if(curString.length >= 15) {
+          newArr.push(arr[i].feedback);
+      }
+    }
+    return newArr;
   }
+//console.log(getLongReviews(reviews));
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
